@@ -12,6 +12,7 @@
     // the keeps that the user created?
 
     mkc.addKeep = function (keep) {
+      debugger
       keep.userId = mkc.user.uid
       keep.viewCount = 0
       keep.shareCount = 0
@@ -21,7 +22,6 @@
     }
 
 		this.$onInit = function () {
-      
 			mkc.user = AuthService.getAuth()
 			
 			Models.Keeps.findAll({userId: mkc.user.uid}).then(function(myKeeps){

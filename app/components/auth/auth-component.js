@@ -16,7 +16,11 @@
 										keep: {
 											localField: 'keeps',
 											localKey: 'userId'
-										}
+										},
+                                        vault: {
+                                            localField: 'vaults',
+                                            localKey: 'userId'
+                                        }
 									}
 								}
             });

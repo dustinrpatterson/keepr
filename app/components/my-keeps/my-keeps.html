@@ -30,4 +30,36 @@
 <div class="my-keeps">
 	<h2>This is a place where you can manage your individual keeps</h2>
 	{{$ctrl.myKeeps}}
+
+	<div class="gallery">
+
+		<div class="col-sm-4 freaking-keeper" style="margin: .6em 0;" ng-repeat="mykeeps in $ctrl.myKeeps | filter: $ctrl.query">
+			<div class="keep">
+				<div class="keep-img">
+					<img ng-src="{{mykeeps.imgUrl}}" alt="Image title">
+					<p class="text-center hideMe">
+						<a class="btn btn-theme" role="button" ng-click="$ctrl.onKeepClick(keep)">K</a>
+						<a class="btn btn-default" href="https://www.facebook.com/sharer/sharer.php?u={{mykeeps.link}};src=sdkpreparse" role="button"><i class="fa fa-share"></i></a>
+						<a class="btn btn-info" role="button" href="{{mykeeps.link}}" target="_blank"><i class="fa fa-eye"></i></a>
+					</p>
+				</div>
+				<div class="keep-details">
+					<hr>
+					<div class="highlights text-muted text-center">
+						<span><span class="theme-font">k:</span>{{mykeeps.keepCount}}</span>
+						<span><i class="fa fa-share"></i>: {{mykeeps.shareCount}}</span>
+						<span><i class="fa fa-eye"></i>: {{mykeeps.viewCount}}</span>
+					</div>
+					<hr>
+					<h3>{{mykeeps.title}}</h3>
+					<div class="caption">
+						<p>{{mykeeps.body}}</p>
+						<hr>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </div>

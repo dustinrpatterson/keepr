@@ -67,3 +67,16 @@ html {
 .alert p{
 	font-size: 1.3em;
 }
+
+.freaking-keeper .hideMe{
+	position:relative;
+	bottom: 50px;
+	justify-content: center;
+	visibility:hidden;
+	margin-bottom: -50px
+}
+
+.freaking-keeper:hover .hideMe{
+	visibility:visible;
+}
+
